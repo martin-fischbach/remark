@@ -3302,7 +3302,7 @@ function Navigation (events) {
     return currentSlideNo;
   }
 
-  function gotoSlide (slideNoOrName) {
+  function gotoSlide (slideNoOrName) {    
     var slideNo = getSlideNo(slideNoOrName)
       , alreadyOnSlide = slideNo === currentSlideNo
       , slideOutOfRange = slideNo < 1 || slideNo > self.getSlideCount()
@@ -3334,6 +3334,7 @@ function Navigation (events) {
     currentSlideNo = slideNo;
 
     events.emit('slideChanged', slideNoOrName || slideNo);
+    $(document).trigger('slideChanged');
 
     if (self.clone && !self.clone.closed) {
       self.clone.postMessage('gotoSlide:' + currentSlideNo, '*');
