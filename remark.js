@@ -2715,7 +2715,7 @@ function removeMouseEventListeners(events) {
   events.removeAllListeners("mousewheel");
 }
 
-function addMouseEventListeners (events) {
+function addMouseEventListeners (events) {/*
   events.on('mousewheel', function (event) {
     if (event.wheelDeltaY > 0) {
       events.emit('gotoPreviousSlide');
@@ -2723,7 +2723,7 @@ function addMouseEventListeners (events) {
     else if (event.wheelDeltaY < 0) {
       events.emit('gotoNextSlide');
     }
-  });
+  });*/
 }
 
 
